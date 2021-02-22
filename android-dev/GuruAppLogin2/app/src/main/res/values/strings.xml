@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Guru App Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="profile_pic">profile-pic</string>
+    <string name="button">Button</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="john_appleseed">John Appleseed</string>
+    <string name="password">Password</string>
+</resources>
