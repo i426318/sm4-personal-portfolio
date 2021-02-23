@@ -22,9 +22,16 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
         val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = diceRoll.toString()
+        val diceRes = diceRoll.toString()
+        resultTextView.text = diceRes
 
-        Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
+        val dice2 = Dice(6)
+        val dice2Roll = dice2.roll()
+        val resultTextView2: TextView = findViewById(R.id.textView2)
+        val dice2Res = dice2Roll.toString()
+        resultTextView2.text = dice2Res
+
+        Toast.makeText(this, "Dices Rolled: $diceRes & $dice2Res", Toast.LENGTH_SHORT).show()
     }
 }
 
