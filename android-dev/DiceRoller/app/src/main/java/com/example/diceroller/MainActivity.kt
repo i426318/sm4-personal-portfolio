@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,13 +26,21 @@ class MainActivity : AppCompatActivity() {
         val diceRes = diceRoll.toString()
         resultTextView.text = diceRes
 
-        val dice2 = Dice(6)
-        val dice2Roll = dice2.roll()
+        val luckyNum = Dice(6)
+        val luckyNumRoll = luckyNum.roll()
         val resultTextView2: TextView = findViewById(R.id.textView2)
-        val dice2Res = dice2Roll.toString()
-        resultTextView2.text = dice2Res
+        val luckyNumRes = luckyNumRoll.toString()
+        resultTextView2.text = luckyNumRes
 
-        Toast.makeText(this, "Dices Rolled: $diceRes & $dice2Res", Toast.LENGTH_SHORT).show()
+        val resultText: TextView = findViewById(R.id.textView3)
+
+        if (diceRoll == luckyNumRoll) {
+            resultText.text = "Pog"
+        }
+        else {
+            resultText.text = "Sadge"
+        }
+
     }
 }
 
