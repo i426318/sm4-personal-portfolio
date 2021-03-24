@@ -19,16 +19,16 @@ struct CircleTab: View {
             }, label: {
                 VStack {
                     if self.index != 0 {
-                        Image("home").foregroundColor(.black)
-                        Text("Home")
+                        Image("").foregroundColor(.black)
+                        Text("Calculator")
                     } else {
-                        Image("home").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                             .padding()
                             .background(Color.blue)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .offset(y: -20)
                             .padding(.bottom, -20)
-                        Text("Home")
+                        Text("Calculator")
                             .foregroundColor(Color.black.opacity(0.7))
                     }
                 }
@@ -42,16 +42,16 @@ struct CircleTab: View {
             }, label: {
                 VStack {
                     if self.index != 1 {
-                        Image("search").foregroundColor(.black)
-                        Text("Search")
+                        Image("").foregroundColor(.black)
+                        Text("Tacos")
                     } else {
-                        Image("search").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
-                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .background(Color.yellow)
+                            .clipShape(Circle())
                             .offset(y: -20)
                             .padding(.bottom, -20)
-                        Text("Search")
+                        Text("Tacos")
                             .foregroundColor(Color.black.opacity(0.7))
                     }
                 }
@@ -64,12 +64,12 @@ struct CircleTab: View {
             }, label: {
                 VStack {
                     if self.index != 2 {
-                        Image("heart").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                         Text("Heart")
                     } else {
-                        Image("heart").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.red)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .offset(y: -20)
                             .padding(.bottom, -20)
@@ -86,12 +86,12 @@ struct CircleTab: View {
             }, label: {
                 VStack {
                     if self.index != 3 {
-                        Image("person").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                         Text("Person")
                     } else {
-                        Image("person").foregroundColor(.black)
+                        Image("").foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.green)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .offset(y: -20)
                             .padding(.bottom, -20)

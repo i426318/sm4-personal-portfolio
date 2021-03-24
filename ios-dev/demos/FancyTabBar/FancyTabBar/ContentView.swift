@@ -16,25 +16,38 @@ struct ContentView: View {
             ZStack {
                 if index == 0 {
                     Color.black.opacity(0.05)
+                    
+                    //calculator view
+                    calculatorView()
+                    
                 } else if index == 1 {
                     Color.yellow
+                    
+                    Text("taco list")
+                    
                 } else if index == 2 {
-                    Color.blue
+                    Color.red
+                    
+                    Text("your health")
+                    
                 } else if index == 3 {
                     Color.orange
+                    Text("is not important.")
                 }
                 
-                Text("Hello")
+                
             }
             Spacer()
             CircleTab(index: $index)
         }.edgesIgnoringSafeArea(.top)
        
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
 }

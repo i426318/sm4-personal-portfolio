@@ -7,27 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5467D1832608A94E006493AF /* FancyTabBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5467D1822608A94E006493AF /* FancyTabBarApp.swift */; };
-		5467D1852608A94E006493AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5467D1842608A94E006493AF /* ContentView.swift */; };
-		5467D1872608A954006493AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5467D1862608A954006493AF /* Assets.xcassets */; };
-		5467D18A2608A954006493AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5467D1892608A954006493AF /* Preview Assets.xcassets */; };
-		5467D1932608AA29006493AF /* CircleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5467D1922608AA29006493AF /* CircleTab.swift */; };
-		54BA9290260B3590000070B5 /* calculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BA928F260B358F000070B5 /* calculatorView.swift */; };
+		54BA92A0260B9FD3000070B5 /* spirographAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BA929F260B9FD3000070B5 /* spirographAppApp.swift */; };
+		54BA92A2260B9FD3000070B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BA92A1260B9FD3000070B5 /* ContentView.swift */; };
+		54BA92A4260B9FD8000070B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BA92A3260B9FD8000070B5 /* Assets.xcassets */; };
+		54BA92A7260B9FD8000070B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BA92A6260B9FD8000070B5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5467D17F2608A94E006493AF /* FancyTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5467D1822608A94E006493AF /* FancyTabBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyTabBarApp.swift; sourceTree = "<group>"; };
-		5467D1842608A94E006493AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5467D1862608A954006493AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5467D1892608A954006493AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5467D18B2608A954006493AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5467D1922608AA29006493AF /* CircleTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTab.swift; sourceTree = "<group>"; };
-		54BA928F260B358F000070B5 /* calculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorView.swift; sourceTree = "<group>"; };
+		54BA929C260B9FD3000070B5 /* spirographApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spirographApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54BA929F260B9FD3000070B5 /* spirographAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spirographAppApp.swift; sourceTree = "<group>"; };
+		54BA92A1260B9FD3000070B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54BA92A3260B9FD8000070B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54BA92A6260B9FD8000070B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54BA92A8260B9FD8000070B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5467D17C2608A94E006493AF /* Frameworks */ = {
+		54BA9299260B9FD3000070B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5467D1762608A94E006493AF = {
+		54BA9293260B9FD2000070B5 = {
 			isa = PBXGroup;
 			children = (
-				5467D1812608A94E006493AF /* FancyTabBar */,
-				5467D1802608A94E006493AF /* Products */,
+				54BA929E260B9FD3000070B5 /* spirographApp */,
+				54BA929D260B9FD3000070B5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5467D1802608A94E006493AF /* Products */ = {
+		54BA929D260B9FD3000070B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5467D17F2608A94E006493AF /* FancyTabBar.app */,
+				54BA929C260B9FD3000070B5 /* spirographApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5467D1812608A94E006493AF /* FancyTabBar */ = {
+		54BA929E260B9FD3000070B5 /* spirographApp */ = {
 			isa = PBXGroup;
 			children = (
-				5467D1822608A94E006493AF /* FancyTabBarApp.swift */,
-				5467D1842608A94E006493AF /* ContentView.swift */,
-				5467D1862608A954006493AF /* Assets.xcassets */,
-				5467D18B2608A954006493AF /* Info.plist */,
-				5467D1882608A954006493AF /* Preview Content */,
-				5467D1922608AA29006493AF /* CircleTab.swift */,
-				54BA928F260B358F000070B5 /* calculatorView.swift */,
+				54BA929F260B9FD3000070B5 /* spirographAppApp.swift */,
+				54BA92A1260B9FD3000070B5 /* ContentView.swift */,
+				54BA92A3260B9FD8000070B5 /* Assets.xcassets */,
+				54BA92A8260B9FD8000070B5 /* Info.plist */,
+				54BA92A5260B9FD8000070B5 /* Preview Content */,
 			);
-			path = FancyTabBar;
+			path = spirographApp;
 			sourceTree = "<group>";
 		};
-		5467D1882608A954006493AF /* Preview Content */ = {
+		54BA92A5260B9FD8000070B5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5467D1892608A954006493AF /* Preview Assets.xcassets */,
+				54BA92A6260B9FD8000070B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,38 +72,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5467D17E2608A94E006493AF /* FancyTabBar */ = {
+		54BA929B260B9FD3000070B5 /* spirographApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5467D18E2608A954006493AF /* Build configuration list for PBXNativeTarget "FancyTabBar" */;
+			buildConfigurationList = 54BA92AB260B9FD8000070B5 /* Build configuration list for PBXNativeTarget "spirographApp" */;
 			buildPhases = (
-				5467D17B2608A94E006493AF /* Sources */,
-				5467D17C2608A94E006493AF /* Frameworks */,
-				5467D17D2608A94E006493AF /* Resources */,
+				54BA9298260B9FD3000070B5 /* Sources */,
+				54BA9299260B9FD3000070B5 /* Frameworks */,
+				54BA929A260B9FD3000070B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FancyTabBar;
-			productName = FancyTabBar;
-			productReference = 5467D17F2608A94E006493AF /* FancyTabBar.app */;
+			name = spirographApp;
+			productName = spirographApp;
+			productReference = 54BA929C260B9FD3000070B5 /* spirographApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5467D1772608A94E006493AF /* Project object */ = {
+		54BA9294260B9FD3000070B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					5467D17E2608A94E006493AF = {
+					54BA929B260B9FD3000070B5 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 5467D17A2608A94E006493AF /* Build configuration list for PBXProject "FancyTabBar" */;
+			buildConfigurationList = 54BA9297260B9FD3000070B5 /* Build configuration list for PBXProject "spirographApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,44 +111,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 5467D1762608A94E006493AF;
-			productRefGroup = 5467D1802608A94E006493AF /* Products */;
+			mainGroup = 54BA9293260B9FD2000070B5;
+			productRefGroup = 54BA929D260B9FD3000070B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5467D17E2608A94E006493AF /* FancyTabBar */,
+				54BA929B260B9FD3000070B5 /* spirographApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5467D17D2608A94E006493AF /* Resources */ = {
+		54BA929A260B9FD3000070B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5467D18A2608A954006493AF /* Preview Assets.xcassets in Resources */,
-				5467D1872608A954006493AF /* Assets.xcassets in Resources */,
+				54BA92A7260B9FD8000070B5 /* Preview Assets.xcassets in Resources */,
+				54BA92A4260B9FD8000070B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5467D17B2608A94E006493AF /* Sources */ = {
+		54BA9298260B9FD3000070B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54BA9290260B3590000070B5 /* calculatorView.swift in Sources */,
-				5467D1852608A94E006493AF /* ContentView.swift in Sources */,
-				5467D1832608A94E006493AF /* FancyTabBarApp.swift in Sources */,
-				5467D1932608AA29006493AF /* CircleTab.swift in Sources */,
+				54BA92A2260B9FD3000070B5 /* ContentView.swift in Sources */,
+				54BA92A0260B9FD3000070B5 /* spirographAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5467D18C2608A954006493AF /* Debug */ = {
+		54BA92A9260B9FD8000070B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		5467D18D2608A954006493AF /* Release */ = {
+		54BA92AA260B9FD8000070B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,44 +262,44 @@
 			};
 			name = Release;
 		};
-		5467D18F2608A954006493AF /* Debug */ = {
+		54BA92AC260B9FD8000070B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FancyTabBar/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"spirographApp/Preview Content\"";
 				DEVELOPMENT_TEAM = YYTT69396J;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FancyTabBar/Info.plist;
+				INFOPLIST_FILE = spirographApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ueen.FancyTabBar;
+				PRODUCT_BUNDLE_IDENTIFIER = ueen.spirographApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5467D1902608A954006493AF /* Release */ = {
+		54BA92AD260B9FD8000070B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FancyTabBar/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"spirographApp/Preview Content\"";
 				DEVELOPMENT_TEAM = YYTT69396J;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FancyTabBar/Info.plist;
+				INFOPLIST_FILE = spirographApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ueen.FancyTabBar;
+				PRODUCT_BUNDLE_IDENTIFIER = ueen.spirographApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5467D17A2608A94E006493AF /* Build configuration list for PBXProject "FancyTabBar" */ = {
+		54BA9297260B9FD3000070B5 /* Build configuration list for PBXProject "spirographApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5467D18C2608A954006493AF /* Debug */,
-				5467D18D2608A954006493AF /* Release */,
+				54BA92A9260B9FD8000070B5 /* Debug */,
+				54BA92AA260B9FD8000070B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5467D18E2608A954006493AF /* Build configuration list for PBXNativeTarget "FancyTabBar" */ = {
+		54BA92AB260B9FD8000070B5 /* Build configuration list for PBXNativeTarget "spirographApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5467D18F2608A954006493AF /* Debug */,
-				5467D1902608A954006493AF /* Release */,
+				54BA92AC260B9FD8000070B5 /* Debug */,
+				54BA92AD260B9FD8000070B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5467D1772608A94E006493AF /* Project object */;
+	rootObject = 54BA9294260B9FD3000070B5 /* Project object */;
 }
