@@ -33,8 +33,8 @@ struct LandmarkList: View {
                         
                     }
                 }
-                .navigationTitle("Landmarks")
             }
+            .navigationTitle("Landmarks")
             
         }
         
@@ -42,9 +42,13 @@ struct LandmarkList: View {
 }
 
 struct LandmarkList_Previews: PreviewProvider {
+    
+    
+    static let modelData = ModelData()
+    
     static var previews: some View {
         
         LandmarkList()
-            .environmentObject(ModelData())
+            .environmentObject(modelData)
     }
 }
