@@ -19,6 +19,7 @@ struct Landmark: Hashable, Codable, Identifiable { //adding 'Codable' eases data
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
     /* add imageName property to:
      - read the name of the image from the data,

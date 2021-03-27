@@ -19,6 +19,7 @@
 		54F11F6B260F7FFF00460986 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F11F6A260F7FFF00460986 /* LandmarkRow.swift */; };
 		54F11F6F260F871B00460986 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F11F6E260F871B00460986 /* LandmarkList.swift */; };
 		54F11F72260F8AC800460986 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F11F71260F8AC800460986 /* LandmarkDetail.swift */; };
+		54F11F75260FCB7800460986 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F11F74260FCB7800460986 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		54F11F6A260F7FFF00460986 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		54F11F6E260F871B00460986 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		54F11F71260F8AC800460986 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		54F11F74260FCB7800460986 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				54F11F6A260F7FFF00460986 /* LandmarkRow.swift */,
 				54F11F6E260F871B00460986 /* LandmarkList.swift */,
 				54F11F71260F8AC800460986 /* LandmarkDetail.swift */,
+				54F11F74260FCB7800460986 /* FavoriteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				54F11F49260F66CE00460986 /* ContentView.swift in Sources */,
 				54F11F5A260F6DDB00460986 /* MapView.swift in Sources */,
 				54F11F47260F66CE00460986 /* LandmarksApp.swift in Sources */,
+				54F11F75260FCB7800460986 /* FavoriteButton.swift in Sources */,
 				54F11F6F260F871B00460986 /* LandmarkList.swift in Sources */,
 				54F11F72260F8AC800460986 /* LandmarkDetail.swift in Sources */,
 				54F11F57260F6D0500460986 /* CircleImage.swift in Sources */,

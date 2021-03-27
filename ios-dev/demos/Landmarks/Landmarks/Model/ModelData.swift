@@ -22,8 +22,20 @@
 
 
 import Foundation
+import Combine
 
-var landmarks: [Landmark] = load("landmarkData.json")
+final class ModelData: ObservableObject { // subscribes and updates any views that needs refreshing when data changes.
+    
+    /*
+     Published attribute:
+     "An observable object needs to
+     publish any changes to its data,
+     so that its subscribers can pick up the change." - Apple Devs
+     */
+    
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
