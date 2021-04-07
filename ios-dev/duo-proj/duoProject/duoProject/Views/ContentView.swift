@@ -13,15 +13,28 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        
+        if index == 0 {
+            VStack {
+                    
+                    HomeView()
+                    
+                    Spacer()
+                    
+                    navigationBar(index: $index)
                 
-                HomeView()
+            }
+        } else {
+            VStack {
+                Text("HELLO WORLD WRONG ADDRESS")
                 
                 Spacer()
                 
                 navigationBar(index: $index)
+            }
             
         }
+        
         
     }
 }
