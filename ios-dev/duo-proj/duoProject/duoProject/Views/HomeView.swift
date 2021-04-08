@@ -26,7 +26,10 @@ struct HomeView: View {
             
             ZStack {
                 
-                cardView()
+                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in // loops cardView according to number of cards in data...
+                    cardView()
+                    
+                }
             }
             
             
