@@ -24,6 +24,10 @@ struct Card: Hashable, Codable, Identifiable {
     var location: Double
     var experience: String
     
+    var skills: String
+    var expLevel: String
+    var others: String
+    
     var isFavorite: Bool
     
     var imageName: String
@@ -44,10 +48,17 @@ struct Card: Hashable, Codable, Identifiable {
              jobPosition: "Software Developer",
              companyName: "Google Inc.",
              companyLocation: "Amsterdam, Netherlands",
-             description: "",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
              salary: "$3000/mo",
              location: 1.5,
              experience: "Fresh-graduate",
+             
+             skills:"C#, Java, C++, .NET",
+             
+             expLevel: "Mid level (2-3 yrs)",
+             
+             others: "Python is a plus :)",
+             
              isFavorite: false,
              
              imageName: ""),
@@ -56,10 +67,17 @@ struct Card: Hashable, Codable, Identifiable {
              jobPosition: "UX Designer",
              companyName: "Apple",
              companyLocation: "Brussels, Belgium",
-             description: "",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
              salary: "$2000/mo",
              location: 45.2,
              experience: "Senior",
+             
+             skills:"Figma, XD, Axure",
+             
+             expLevel: "Mid level (2-3 yrs)",
+             
+             others: "Photoshop and Illustrator for side-design shenanigans :)",
+             
              isFavorite: false,
              
              imageName: "")

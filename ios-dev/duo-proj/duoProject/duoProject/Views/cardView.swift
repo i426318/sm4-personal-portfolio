@@ -12,6 +12,8 @@ struct cardView: View {
     @State var card: Card // calls the card data.
     @State var isModal = false
     
+    
+    
     var body: some View {
         
         let txtSubColor = Color.init(red: 135/255, green: 135/255, blue: 135/255)
@@ -187,11 +189,18 @@ struct cardView: View {
     }
 }
 
+
+// CARD DETAILS STRUCT :D :D :'D
+
 struct cardDetailedView: View {
     
     @State var card: Card // calls the card data.
     
+    @State private var indexTab = 0
+    
     var body: some View {
+        
+        ScrollView(.vertical) {
         VStack {
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                 .fill(Color.gray).opacity(0.6)
@@ -228,14 +237,7 @@ struct cardDetailedView: View {
                 
                 Divider().padding(.horizontal, 65)
                 
-                
-                Text("Compatibility")
-                    .font(.system(size: 20))
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 10)
-                    .padding(.top, 10)
-                
-                
+            
                 HStack {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -303,11 +305,42 @@ struct cardDetailedView: View {
                 }
                 .padding(.horizontal, 50)
                 .padding(.vertical)
-            
+                
+                // fill here for tabs
+                // add if index blabla whatever lah
+                // buat description etc
+                
+                detailedCustomTab(indexTab: $indexTab)
+                    .padding(.bottom, 10)
+                
+                if indexTab == 0 { // DESCRIPTION.
+                    
+                    HStack {
+                        Text("Overview")
+                            .bold()
+                            .font(.title2)
+                            .padding(1)
+                        Spacer()
+                    }.padding(.horizontal, 25)
+                    
+                    Text(card.description)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 25)
+                        .padding(.trailing, 20)
+                    
+                } else if indexTab == 1 { // REQUIREMENTS.
+                   
+                   
+                    
+                } else if indexTab == 2 { // PERSONALITY.
+                    
+                } // end of detailed buttons.
+                
         }
     }
 }
     
+}
 }
 
 struct cardView_Previews: PreviewProvider {
