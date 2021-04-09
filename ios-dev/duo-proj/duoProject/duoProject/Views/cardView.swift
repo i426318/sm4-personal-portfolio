@@ -9,7 +9,9 @@ import SwiftUI
 
 struct cardView: View {
     
-    let card: Card // calls the card data.
+    @State var card: Card // calls the card data.
+    @State var isModal = false
+    
     var body: some View {
         
         let txtSubColor = Color.init(red: 135/255, green: 135/255, blue: 135/255)
@@ -21,12 +23,17 @@ struct cardView: View {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                   .foregroundColor(bgColor)
                   .padding()
+                  .shadow(radius: 15)
                     
                 
                 VStack {
-                    Image(card.imageName) // image of company.
+                    Image(systemName: "signature") // image of company.
                         .foregroundColor(.blue)
                         .font(.system(size: 100))
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                        .shadow(radius: 7)
+                        .padding(.bottom, 5)
                     
                     Text(card.jobPosition) // job title.
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -43,7 +50,7 @@ struct cardView: View {
                     .padding(.horizontal, 25)
                    
                     
-                    Divider()
+                    Divider().padding(.horizontal, 65)
                     
                     Text("Compatibility")
                         .font(.system(size: 20))
@@ -94,18 +101,219 @@ struct cardView: View {
                     }
                     .padding(.horizontal, 50)
                     .padding(.vertical)
+                
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.blue)
+                            .frame(width: 120, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                       
+                        Button(action: {
+                            // toggles modalView of the chosen data.
+                            self.isModal.toggle()
+                            
+                        }, label: {
+                                
+                                Text("More Info")
+                                    .foregroundColor(.white)
+                                    .bold()
+                            
+                        })
+                    }.padding(.top, 20)
+                    .sheet(isPresented:$isModal, content: {
+                        
+                        // shows detailed view according to company id
+                        cardDetailedView(card: card)
+                        
+                    })
+                    
+                    
                 }
                 
                 
             }
+            // zstack following the coordinates of the card model
+            .offset(x: card.x, y: card.y)
+            .rotationEffect(.init(degrees: card.degree))
+        
+            // gesture -> updates the coordinate vals of the card model
+            .gesture(
+            
+                DragGesture()
+                    .onChanged { value in
+                        // user is dragging the view
+                        withAnimation(.default) { // default animation
+                            card.x = value.translation.width
+                            card.y = value.translation.height
+                            card.degree = 7 * (value.translation.width > 0 ? 1 : -1)
+                        }
+                    }
+                    .onEnded { value in
+                        /* does something when user stops dragging.
+                           add 3-way cases ->
+                         1. slightly left = nope
+                         2. middle = clickback (neutral)
+                         3. slightly right = yes
+                        */
+                        withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 75, damping: 10, initialVelocity: 0)) { // springs back animation.
+                            
+                            switch value.translation.width {
+                            
+                            // 1. if x value is slight right
+                            case 0...100:
+                                card.x = 0; card.degree = 0; card.y = 0
+                                
+                            // 2. if x value is right++
+                            case let x where x > 100:
+                                card.x = 500; card.degree = 12
+                                
+                            // 3. if x value is slight left
+                            case (-100)...(-1):
+                                card.x = 0; card.degree = 0; card.y = 0
+                                
+                            // 4. if x value is left++
+                            case let x where x < -100:
+                                card.x = -500; card.degree = -12
+                            
+                            // default scenario (normal state)
+                            default: card.x = 0; card.y = 0
+                            }
+                        }
+                    }
+            
+            
+            )
         
         
     }
 }
 
+struct cardDetailedView: View {
+    
+    @State var card: Card // calls the card data.
+    
+    var body: some View {
+        VStack {
+            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                .fill(Color.gray).opacity(0.6)
+                .frame(height: 10, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal, 150)
+                .padding(.vertical, 10)
+            
+            Spacer(minLength: 5)
+            
+            VStack {
+                Image(systemName: "signature") // image of company.
+                    .foregroundColor(.blue)
+                    .font(.system(size: 100))
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                    .shadow(radius: 7)
+                    .padding(.bottom, 5)
+                
+                Text(card.jobPosition) // job title.
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .bold()
+                
+                Text(card.companyName) // companyName.
+                        .padding(.top, 1)
+                        .font(.system(size: 20))
+                    
+                Text(card.companyLocation) // location.
+                
+                .font(.subheadline)
+                    .foregroundColor(.gray)
+                .padding(.horizontal, 25)
+                
+               
+                
+                Divider().padding(.horizontal, 65)
+                
+                
+                Text("Compatibility")
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                    .padding(.bottom, 10)
+                    .padding(.top, 10)
+                
+                
+                HStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.yellow)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            
+                            .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                        
+                        VStack { // SALARY
+                            Text(card.salary) // salary values.
+                                .padding(.bottom, 10)
+                            
+                            Text("Salary")
+                                
+                            
+                            Image(systemName: "dollarsign.circle")
+                            
+                        }.font(.system(size: 14))
+                    }
+                    
+                    
+                    Spacer(minLength: 5)
+                   
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.green)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            
+                            .opacity(0.5)
+                        
+                        VStack { // EXPERIENCE
+                            
+                            Text(card.experience) // exp values.
+                                .padding(.bottom, 10)
+                            
+                            Text("Experience")
+                            Image(systemName: "person.3")
+                            
+                        }.font(.system(size: 14))
+                    }
+                    
+                    
+                    
+                    
+                    Spacer(minLength: 5)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.blue)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            
+                            .opacity(0.5)
+                        
+                        VStack { // LOCATION
+                            
+                            Text(String(card.location) + " km") // loc values.
+                                .padding(.bottom, 10)
+                            
+                            Text("Location")
+                            Image(systemName: "mappin.circle")
+                            
+                        }.font(.system(size: 14))
+                    }
+                    
+                }
+                .padding(.horizontal, 50)
+                .padding(.vertical)
+            
+        }
+    }
+}
+    
+}
 
 struct cardView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
+        
     }
 }

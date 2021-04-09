@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var index = 0
+    @State private var index = 2
     
     var body: some View {
         

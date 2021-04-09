@@ -26,7 +26,7 @@ struct HomeView: View {
             
             ZStack {
                 
-                ForEach(Card.data) { card in // loops cardView according to number of cards in data...
+                ForEach(Card.data.reversed()) { card in // loops cardView according to number of cards in data...
                     cardView(card: card)
                     
                 }
@@ -34,6 +34,7 @@ struct HomeView: View {
             
             
         }
+        
         
     }
 }
