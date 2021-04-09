@@ -22,10 +22,11 @@ struct Card: Hashable, Codable, Identifiable {
     // traits for selections.
     var salary: String
     var location: Double
+    var experience: String
     
     var isFavorite: Bool
     
-    private var imageName: String
+    var imageName: String
     var imageCompany: Image {
         Image(imageName)
     }
@@ -39,24 +40,26 @@ struct Card: Hashable, Codable, Identifiable {
     
     static var data: [Card] { [
     
-        Card(id: 0,
+        Card(id: 1,
              jobPosition: "Software Developer",
              companyName: "Google Inc.",
              companyLocation: "Amsterdam, Netherlands",
              description: "",
              salary: "$3000/mo",
              location: 1.5,
+             experience: "Fresh-graduate",
              isFavorite: false,
              
              imageName: ""),
         
-        Card(id: 1,
+        Card(id: 2,
              jobPosition: "UX Designer",
              companyName: "Apple",
              companyLocation: "Brussels, Belgium",
              description: "",
              salary: "$2000/mo",
              location: 45.2,
+             experience: "Senior",
              isFavorite: false,
              
              imageName: "")

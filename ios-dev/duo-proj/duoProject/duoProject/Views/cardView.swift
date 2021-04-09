@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct cardView: View {
+    
+    let card: Card // calls the card data.
     var body: some View {
         
         let txtSubColor = Color.init(red: 135/255, green: 135/255, blue: 135/255)
@@ -19,22 +21,22 @@ struct cardView: View {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                   .foregroundColor(bgColor)
                   .padding()
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
                 
                 VStack {
-                    Image(systemName: "clear") // image of company.
+                    Image(card.imageName) // image of company.
                         .foregroundColor(.blue)
                         .font(.system(size: 100))
                     
-                    Text("Software Developer") // job title.
+                    Text(card.jobPosition) // job title.
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .bold()
                     
-                        Text("Google, Inc.") // companyName.
+                    Text(card.companyName) // companyName.
                             .padding(.top, 1)
                             .font(.system(size: 20))
                         
-                        Text("Amsterdam, Netherlands") // location.
+                    Text(card.companyLocation) // location.
                     
                     .font(.subheadline)
                     .foregroundColor(txtSubColor)
@@ -52,7 +54,7 @@ struct cardView: View {
                     
                     HStack {
                         VStack { // SALARY
-                            Text("$5000/mo") // salary values.
+                            Text(card.salary) // salary values.
                                 .padding(.bottom, 10)
                             
                             Text("Salary")
@@ -66,7 +68,7 @@ struct cardView: View {
                        
                         VStack { // EXPERIENCE
                             
-                            Text("Fresh-graduate") // exp values.
+                            Text(card.experience) // exp values.
                                 .padding(.bottom, 10)
                             
                             Text("Experience")
@@ -79,7 +81,7 @@ struct cardView: View {
                         
                         VStack { // LOCATION
                             
-                            Text("1,5km") // loc values.
+                            Text(String(card.location) + " km") // loc values.
                                 .padding(.bottom, 10)
                             
                             Text("Location")
@@ -104,6 +106,6 @@ struct cardView: View {
 
 struct cardView_Previews: PreviewProvider {
     static var previews: some View {
-        cardView()
+        ContentView()
     }
 }

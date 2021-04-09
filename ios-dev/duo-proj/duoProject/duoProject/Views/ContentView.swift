@@ -14,19 +14,37 @@ struct ContentView: View {
     var body: some View {
         
         
-        if index == 0 {
+        if index == 0 { // profile page.
             VStack {
                     
-                    HomeView()
+                    Text("PROFILE PAGE")
                     
                     Spacer()
                     
                     navigationBar(index: $index)
                 
             }
-        } else {
+        } else if index == 1 { // joblist page.
             VStack {
-                Text("HELLO WORLD WRONG ADDRESS")
+                Text("JOBLIST PAGE")
+                
+                Spacer()
+                
+                navigationBar(index: $index)
+            }
+            
+        } else if index == 2 { // swipe page.
+            VStack {
+                HomeView()
+                
+                Spacer()
+                
+                navigationBar(index: $index)
+            }
+            
+        } else if index == 3 { // network page.
+            VStack {
+                Text("NETWORK PAGE")
                 
                 Spacer()
                 
