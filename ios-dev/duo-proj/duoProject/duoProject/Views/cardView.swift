@@ -330,9 +330,57 @@ struct cardDetailedView: View {
                     
                 } else if indexTab == 1 { // REQUIREMENTS.
                    
-                   
+                    VStack {
+                        HStack {
+                            Text("Skills")
+                                .bold()
+                                .font(.title2)
+                                .padding(1)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                        HStack {
+                            Text(card.skills)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                        HStack {
+                            Text("Experience Level")
+                                .bold()
+                                .font(.title2)
+                                .padding(1)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                        
+                        HStack {
+                            Text(card.expLevel)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                        
+                        HStack {
+                            Text("Others")
+                                .bold()
+                                .font(.title2)
+                                .padding(1)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                        HStack {
+                            Text(card.others)
+                            Spacer()
+                        }.padding(.horizontal, 25)
+                        
+                
+                        
+                    }
+                    
                     
                 } else if indexTab == 2 { // PERSONALITY.
+                    
+                    // circleShape showing stats
+                    
                     
                 } // end of detailed buttons.
                 

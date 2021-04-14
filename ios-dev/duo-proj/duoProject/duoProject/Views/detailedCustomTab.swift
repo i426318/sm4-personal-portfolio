@@ -16,7 +16,7 @@ struct detailedCustomTab: View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.gray).opacity(0.2)
-                .frame(width: 340, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(width: 340, height: 50, alignment: .center)
             
             HStack {
                 Button(action: {

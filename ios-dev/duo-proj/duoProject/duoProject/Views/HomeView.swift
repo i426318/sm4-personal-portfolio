@@ -2,6 +2,9 @@
 //  HomeView.swift
 //  duoProject
 //
+
+// Home View (Swipe Page)
+
 //  Created by Nathanael William on 06/04/21.
 //
 
