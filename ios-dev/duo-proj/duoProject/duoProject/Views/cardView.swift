@@ -29,7 +29,9 @@ struct cardView: View {
                     
                 
                 VStack {
-                    Image(systemName: "signature") // image of company.
+                    Image(card.imageName)
+                        .resizable()// image of company.
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.blue)
                         .font(.system(size: 100))
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
