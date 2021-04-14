@@ -26,7 +26,8 @@ struct ContentView: View {
             }
         } else if index == 1 { // joblist page.
             VStack {
-                Text("JOBLIST PAGE")
+                
+                joblistView()
                 
                 Spacer()
                 

@@ -15,16 +15,18 @@ struct HomeView: View {
         
         VStack {
             HStack {
-                Text("Your Job Matches")
+                Text("Your matches.")
                     .bold()
-                    .font(.system(size: 25))
+                    .font(.title2)
                 
                 Spacer()
                 
-                Image(systemName: "sun.min") // for our logo.
+                Image("logo") // for our logo.
+                    .resizable()
+                    .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
-            .padding(.horizontal, 55)
-            .padding(.top, 25)
+            .padding(.horizontal, 25)
+            
            
             
             ZStack {

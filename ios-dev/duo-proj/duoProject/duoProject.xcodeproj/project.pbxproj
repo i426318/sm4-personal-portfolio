@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		546A4F022620E32D00C7DE33 /* detailedCustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A4F012620E32D00C7DE33 /* detailedCustomTab.swift */; };
+		548E16962627058A0060B646 /* joblistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548E16952627058A0060B646 /* joblistView.swift */; };
 		54953ECC261C49CC002737B9 /* duoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54953ECB261C49CC002737B9 /* duoProjectApp.swift */; };
 		54953ECE261C49CC002737B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54953ECD261C49CC002737B9 /* ContentView.swift */; };
 		54953ED0261C49CF002737B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54953ECF261C49CF002737B9 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		546A4F012620E32D00C7DE33 /* detailedCustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailedCustomTab.swift; sourceTree = "<group>"; };
+		548E16952627058A0060B646 /* joblistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joblistView.swift; sourceTree = "<group>"; };
 		54953EC8261C49CC002737B9 /* duoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54953ECB261C49CC002737B9 /* duoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duoProjectApp.swift; sourceTree = "<group>"; };
 		54953ECD261C49CC002737B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				54953EED261CE1B9002737B9 /* cardView.swift */,
 				54953EF0261CE21F002737B9 /* companyCards.swift */,
 				546A4F012620E32D00C7DE33 /* detailedCustomTab.swift */,
+				548E16952627058A0060B646 /* joblistView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				54953EDC261C4D85002737B9 /* navigationBar.swift in Sources */,
 				54953EF1261CE21F002737B9 /* companyCards.swift in Sources */,
 				54953ECC261C49CC002737B9 /* duoProjectApp.swift in Sources */,
+				548E16962627058A0060B646 /* joblistView.swift in Sources */,
 				54953EEE261CE1B9002737B9 /* cardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
