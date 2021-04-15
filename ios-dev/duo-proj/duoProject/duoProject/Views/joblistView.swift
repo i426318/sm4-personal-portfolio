@@ -10,8 +10,9 @@ import SwiftUI
 struct joblistView: View {
     
     @State var indexTab = 0
-    var body: some View {
     
+    
+    var body: some View {
         
         VStack {
           
@@ -146,7 +147,36 @@ struct joblistView: View {
             
             Spacer()
             
-                Text("poggers")
+            List {
+                if indexTab == 0 { // favs.
+                    ForEach(Card.data.reversed()) { card in
+                        
+                            HStack {
+                            Image(card.imageName)
+                                .resizable()
+                                .frame(width: 100, height: 100, alignment: .center)
+                                
+                            Spacer()
+                            
+                            Text(card.companyName)
+                        }
+                        
+                        
+                    }
+                }
+                
+                else if indexTab == 1 { // in progress.
+                    
+                }
+                
+                else if indexTab == 2 { // accepted.
+                    
+                }
+                
+                else if indexTab == 3 { // rejected.
+                    
+                }
+            }
             
             
         }
