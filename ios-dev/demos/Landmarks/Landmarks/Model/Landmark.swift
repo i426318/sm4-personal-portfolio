@@ -20,6 +20,14 @@ struct Landmark: Hashable, Codable, Identifiable { //adding 'Codable' eases data
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
+    
+    var category: Category
+        enum Category: String, CaseIterable, Codable {
+            case lakes = "Lakes"
+            case rivers = "Rivers"
+            case mountains = "Mountains"
+        }
     
     /* add imageName property to:
      - read the name of the image from the data,

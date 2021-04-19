@@ -34,6 +34,18 @@ final class ModelData: ObservableObject { // subscribes and updates any views th
      */
     
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    
+    
+    var features: [Landmark] { // contains only the landmarks that have isFeatured.
+        landmarks.filter { $0.isFeatured }
+    }
+    
+    var categories: [String: [Landmark]] {
+            Dictionary(
+                grouping: landmarks,
+                by: { $0.category.rawValue }
+            )
+        }
 }
 
 
