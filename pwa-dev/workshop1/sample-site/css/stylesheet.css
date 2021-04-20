@@ -22,6 +22,7 @@ p															{ margin:0px 0px 15px 0px; }
 p a														{ color:var(--colors-text-highlight);text-decoration:none; }
 p a:hover											{ text-decoration:underline; }
 p:last-child									{ margin:0px; }
+a { text-decoration:none; color: lightblue; }
 
 /* Other elements */
 #website_container						{ width:310px;height:100vh;text-align:center;margin:0px auto;display:flex;justify-content:center;align-items:center;overflow:hidden; }
