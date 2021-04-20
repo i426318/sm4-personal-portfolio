@@ -1,9 +1,17 @@
 {
 	"short_name": "wieliy",
 	"name": "Nathanael William",
+	"icons": [
+		{
+			"src": "/images/yes.gif",
+			"type": "image/gif",
+			"sizes": "192x192"
+		}
+	],
+
 	"lang": "en",
 	"description": "my first manifest.json file, hello world.",
-	"start_url": "https://",
+	"start_url": "https://www.i426318.hera.fhict.nl/",
 	"background_color": "#fff1ce",
 	"theme_color": "#00aae7",
 	"dir": "ltr",
