@@ -1,5 +1,28 @@
+
+// 1.1 - Caching Important PWA files for offline use.
+const cacheName="pwaCache";
+const appFiles=[
+  "/manifest.json",
+  "/scripts.js",
+  "/css/stylesheet.css",
+  "/images/yes.gif"
+];
+
+
+
+
+
+
 self.addEventListener("install",(installing)=>{
     console.log("Service Worker: I am being installed, hello world!");
+    
+    installing.waitUntil(
+      caches.open(cacheName).then((cache)=>{
+        console.log("Service Worker: Caching important offline files");
+        return cache.addAll(appFiles);
+      })
+    );
+
   });
   
   self.addEventListener("activate",(activating)=>{	
