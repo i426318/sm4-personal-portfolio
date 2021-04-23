@@ -1,71 +1,59 @@
 
 // 1.1 - Caching Important PWA files for offline use.
-const cacheName="pwaCache";
-const appFiles=[
+var cacheName = "pwaCache";
+var appFiles = [
   "/manifest.json",
   "/scripts.js",
-  "/css/stylesheet.css",
-  "/images/yes.gif",
-  "/index.html"
+  "/stylesheet.css",
+  "/index.html",
+  "/logo.png",
+  "/yes.gif",
+  "/service-worker.js"
 ];
 
 
 
+// install phase. One-time.
+self.addEventListener("install", e => {
+  console.log("Service Worker: I am being installed, hello world!");
 
-self.addEventListener("install",(installing)=>{
-    console.log("Service Worker: I am being installed, hello world!");
-    
-    // 1.1 - Cache the files via install event.
-    installing.waitUntil(
-      caches.open(cacheName).then((cache)=>{
-        console.log("Service Worker: Caching important offline files");
-        return cache.addAll(appFiles);
-      })
-    );
+  // 1.1 - Cache the files via install event.
+  e.waitUntil( // taking a promise.
 
-  });
-  
-  self.addEventListener("activate",(activating)=>{	
-    console.log("Service Worker: All systems online, ready to go!");
-  });
-  
+    // opening a cache in our dir.
+    // then, we have the 'cache' Object.
+    caches.open(cacheName).then(cache => {
+      console.log("Service Worker: Caching important offline files");
+      // passing through list of assets.
+      return cache.addAll(appFiles);
+    }).catch(e => {
+      console.log("caching failed with error msg: " + e);
+    })
+  );
 
-  self.addEventListener("fetch",(fetching)=>{   
-    console.log("Service Worker: User threw a ball, I need to fetch it!");
-
-    fetching.respondWith( //respond fetch with...
-
-      // a match in the fetch request! then...
-      caches.match(fetching.request.url).then((response)=>{
-
-        // fetching the resources...
-        console.log("Service Worker: Fetching resource "+fetching.request.url);
-
-        // return response OR fetch request (offline no url?) then...
-        return response||fetch(fetching.request).then((response)=>{
-
-          // the fetch request is not available in cache.
-          console.log("Service Worker: Resource "+fetching.request.url+" not available in cache");
-          // returns cache then...
-          return caches.open(cacheName).then((cache)=>{
-            // caching new resource?...
-              console.log("Service Worker: Caching (new) resource "+fetching.request.url);
-              cache.put(fetching.request,response.clone());
-            return response;
-          });
-        }).catch(function(){      
-          console.log("Service Worker: Fetching online failed, HAALLPPPP!!!");
-          //Do something else with the request (respond with a different cached file)
-
-        })
-      })
-    );
+});
 
 
-  });
-  
-  self.addEventListener("push",(pushing)=>{
-      console.log("Service Worker: I received some push data, but because I am still very simple I don't know what to do with it :(");
-  })
-  
-  
+self.addEventListener("activate", (activating) => {
+  console.log("Service Worker: All systems online, ready to go!");
+});
+
+
+// fetch listener. This will run once we have a 'fetch' event.
+
+self.addEventListener("fetch", e => {
+  console.log('Intercepting fetch req for: ${e.request.url}');
+  e.respondWith(
+    caches.match(e.request).then(response => {
+      return response || fetch(e.request);
+    })
+  )
+
+});
+
+
+
+self.addEventListener("push", (pushing) => {
+  console.log("Service Worker: I received some push data, but because I am still very simple I don't know what to do with it :(");
+})
+
