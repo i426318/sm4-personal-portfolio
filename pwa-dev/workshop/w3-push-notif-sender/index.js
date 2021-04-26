@@ -5,7 +5,7 @@ const prompts = require("prompts");
 
 //Location of your subscribers file (normally they would be in a database)
 const yourSubscriberJSONFileURL =
-  "https://www.i426318.hera.fhict.nl/subscribers.json";
+  "https://www.i426318.hera.fhict.nl/data/subscribers.json";
 
 //Place your keys here
 webpush.setVapidDetails(
