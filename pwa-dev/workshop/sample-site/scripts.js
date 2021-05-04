@@ -34,3 +34,17 @@ if("serviceWorker" in navigator){
     //The registration of the service worker failed
     console.log("Browser: I don't support Service Workers :(");
   }
+
+
+
+  let installPrompt; //Variable to store the install action in
+
+window.addEventListener("beforeinstallprompt",(event)=>{	
+	event.preventDefault(); //Prevent the event (this prevents the default bar to show up)
+
+	installPrompt=event; //Install event is stored for triggering it later
+
+  var btn = document.getElementsByClassName("button");
+  btn.style.visibility = "visible";
+	//...do something here to show your install button
+});

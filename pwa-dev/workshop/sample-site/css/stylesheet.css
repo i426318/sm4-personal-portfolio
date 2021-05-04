@@ -46,6 +46,7 @@ button {
 	padding: 5px;
 	text-decoration: var(--colors-text-light);
 	border-radius: 15px;
+	visibility: hidden;
 }
 
 button p {
