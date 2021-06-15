@@ -1,6 +1,9 @@
 # SM4 Personal Portfolio
 
-This is my Git repository for SOLO and Personal Portfolio. <br>
-Workshop Projects for all subjects will be found in the repo, while the personal portfolio is accessible in the wiki.
-
 Nathanael William, i426318
+<br>
+!!! Freshly migrated from GitLab !!!
+<hr>
+
+*This is a working Git repo. Changes will be made eventually.
+The focus of this repo is for my personal progress relating to semester 4's Smart Mobile specialisation.*
